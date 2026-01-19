@@ -4,7 +4,6 @@ interface AudioSettings {
 	localDir: string;
 	onlineTemplate: string;
 	useLocalFirst: boolean;
-	insertHtmlAudio: boolean;
 	wordPattern: string;
 	enablePeriodicSync: boolean;
 	syncIntervalMinutes: number;
@@ -16,7 +15,6 @@ const DEFAULT_SETTINGS: AudioSettings = {
 	localDir: ".plugins-data/auto-word-audio",
 	onlineTemplate: "https://dict.youdao.com/dictvoice?audio={{word}}&type=2",
 	useLocalFirst: false,
-	insertHtmlAudio: true,
 	wordPattern: "^\\[\\[([A-Za-z-']+)\\]\\]",
 	enablePeriodicSync: false,
 	syncIntervalMinutes: 30,
@@ -691,16 +689,6 @@ class AudioSettingTab extends PluginSettingTab {
 					await this.plugin.saveSettings();
 				}));
 
-		// 插入格式
-		new Setting(containerEl)
-			.setName("使用 HTML audio 标签")
-			.setDesc("启用后使用 <audio> 标签；禁用则使用 Markdown 图片语法 ![]()")
-			.addToggle(toggle => toggle
-				.setValue(this.plugin.settings.insertHtmlAudio)
-				.onChange(async (value) => {
-					this.plugin.settings.insertHtmlAudio = value;
-					await this.plugin.saveSettings();
-				}));
 
 		// 单词匹配模式
 		new Setting(containerEl)
