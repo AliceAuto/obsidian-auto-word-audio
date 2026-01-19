@@ -1,0 +1,10 @@
+{
+	"id": "auto-word-audio",
+	"name": "Auto Word Audio",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Automatically attach audio pronunciation for vocabulary words, with support for online streaming and local caching.",
+	"author": "MindData",
+	"authorUrl": "",
+	"isDesktopOnly": false
+}

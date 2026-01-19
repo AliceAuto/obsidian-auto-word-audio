@@ -1,0 +1,10 @@
+/* 自定义样式（如果需要） */
+
+.auto-word-audio-container {
+	margin: 0.5em 0;
+}
+
+audio {
+	width: 100%;
+	max-width: 300px;
+}
