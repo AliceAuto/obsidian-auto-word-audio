@@ -196,7 +196,7 @@ npm run build
 
 ## 📄 许可证
 
-MIT License
+[MIT License](LICENSE) - 自由使用，保留版权声明即可
 
 ## 💬 反馈与支持
 
