@@ -16,7 +16,9 @@
 
 ```
 [markdown]
-{audio: wisdom}
+```word-audio
+wisdom
+```
         ↓
     [插件]
     ├─ 解析标记
@@ -33,12 +35,14 @@
 ### 基本用法
 
 1. 在单词笔记中按格式书写：
-```markdown
+````markdown
 [[wisdom]] /ˈwɪzdəm/
 ?
-{audio: wisdom}
-[n.] 智慧；名言，格言
+```word-audio
+wisdom
 ```
+[n.] 智慧；名言，格言
+````
 
 2. 打开命令面板（Ctrl/Cmd + P），执行：
    - `为当前行添加音频标记` - 为光标所在行的单词添加标记
@@ -46,17 +50,6 @@
    - `立即同步音频到本地` - 手动触发音频下载
 
 3. 在预览/阅读视图中会自动渲染为音频播放器
-
-### Markdown 格式
-
-标准音频代码块语法：
-````markdown
-```word-audio
-wisdom
-```
-````
-
-插件会自动识别并渲染为可播放的音频组件。
 
 ## 设置选项
 
@@ -106,7 +99,7 @@ https://www.collinsdictionary.com/sounds/hwd_sounds/{{word}}.mp3
 
 4. **切换音源**：
    - 只需修改"在线音频模板"设置
-   - 所有 `{audio: word}` 标记会自动使用新源
+   - 所有音频代码块会自动使用新源
    - 无需修改任何笔记内容！
 
 ## 与 Media Extended 插件配合
